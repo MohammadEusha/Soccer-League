@@ -1,0 +1,99 @@
+import React, { useState } from 'react';
+import maleImg from '../../Photo/Rectangle 28.png'
+import femaleImg from '../../Photo/female.png'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faFlag, faFutbol, faMapMarker, faMars, faArrowAltCircleRight } from '@fortawesome/free-solid-svg-icons'
+import facebookIcon from '../../Icon/Facebook.png'
+import youtubeIcon from '../../Icon/YouTube.png'
+import twitterIcon from '../../Icon/Twitter.png'
+const LeagueInfo = (props) => {
+    const { strLeague, intFormedYear, strCountry, strSport, strGender, strLogo, strBanner, strDescriptionEN, strFacebook, strYoutube, strTwitter } = props.league
+
+    const [gender, setGender] = useState(false)
+
+
+    let display;
+    let showImage;
+    let buttonText;
+    if (gender) {
+        display = <p class="card-text"><FontAwesomeIcon icon={faMars} /> Gender : {strGender}</p>
+        showImage = <img src={maleImg} className='img-fluid rounded img-thumbnail' alt="..."></img>
+        buttonText = <p>See Female Players <FontAwesomeIcon icon={faArrowAltCircleRight} /></p>
+    }
+    else {
+        display = <p class="card-text"><FontAwesomeIcon icon={faMars} /> Gender : Female</p>
+        showImage = <img src={femaleImg} className='img-fluid rounded img-thumbnail' alt="..."></img>
+        buttonText = <p>See Male Players <FontAwesomeIcon icon={faArrowAltCircleRight} /></p>
+    }
+
+
+    return (
+        <div style={{ backgroundColor: ' #282c34' }}>
+            <header>
+                <div >
+                    <div>
+                        <div className="card bg-dark text-white">
+                            <img src={strBanner} class="card-img" alt="..."></img>
+                            <div className="card-img-overlay">
+                                <img style={{ width: '240px', height: '75px' }} src={strLogo} class="img-fluid rounded mx-auto d-block" alt="..."></img>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </header>
+            <div className="m-5 mb-5">
+                <div >
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-md">
+                                <div class="card mt-3 mb-3 text-white" style={{ maxwidth: "540px", maxHeight: "400px", backgroundColor: '#101a2b' }}>
+                                    <div class="row g-0">
+                                        <div class="col-md-6">
+                                            <div class="card-body">
+                                                <h3 class="card-title">{strLeague}</h3>
+                                                <p class="card-text"><FontAwesomeIcon icon={faMapMarker} /> Founded : {intFormedYear}</p>
+                                                <p class="card-text"><FontAwesomeIcon icon={faFlag} /> Country : {strCountry}</p>
+                                                <p class="card-text"><FontAwesomeIcon icon={faFutbol} /> Sport Type : {strSport}</p>
+
+                                                {display}
+
+                                                <button style={{ width: '200px', height: '40px' }} onClick={() => setGender(!gender)} type="button" class="btn btn-secondary ">{buttonText}</button>
+                                            </div>
+
+                                        </div>
+                                        <div class="col-md-6">
+
+                                            {showImage}
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className="container text-white pt-4 pb-5">
+                <p>{strDescriptionEN}</p>
+            </div>
+
+            <div>
+                <div style={{ display: 'flex', justifyContent: 'center' }}>
+                    <a href={`https://${strFacebook}`} target="_blank" rel="noreferrer">
+                        <img style={{ height: '50px' }} src={facebookIcon} alt="" />
+                    </a>
+                    <a href={`https://${strYoutube}`} target="_blank" rel="noreferrer">
+                        <img style={{ height: '50px' }} src={youtubeIcon} alt="" />
+                    </a>
+                    <a href={`https://${strTwitter}`} target="_blank" rel="noreferrer">
+                        <img style={{ height: '50px' }} src={twitterIcon} alt="" />
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    );
+};
+
+export default LeagueInfo;
