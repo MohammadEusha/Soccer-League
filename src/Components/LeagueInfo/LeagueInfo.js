@@ -16,14 +16,14 @@ const LeagueInfo = (props) => {
     let showImage;
     let buttonText;
     if (gender) {
-        display = <p className="card-text"><FontAwesomeIcon icon={faMars} /> Gender : {strGender}</p>
-        showImage = <img src={maleImg} className='img-fluid rounded img-thumbnail' alt="..."></img>
-        buttonText = <p>See Female Players <FontAwesomeIcon icon={faArrowAltCircleRight} /></p>
-    }
-    else {
         display = <p className="card-text"><FontAwesomeIcon icon={faMars} /> Gender : Female</p>
         showImage = <img src={femaleImg} className='img-fluid rounded img-thumbnail' alt="..."></img>
         buttonText = <p>See Male Players <FontAwesomeIcon icon={faArrowAltCircleRight} /></p>
+    }
+    else {
+        display = <p className="card-text"><FontAwesomeIcon icon={faMars} /> Gender : {strGender}</p>
+        showImage = <img src={maleImg} className='img-fluid rounded img-thumbnail' alt="..."></img>
+        buttonText = <p>See feMale Players <FontAwesomeIcon icon={faArrowAltCircleRight} /></p>
     }
 
 
