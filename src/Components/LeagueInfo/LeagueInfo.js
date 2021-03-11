@@ -23,7 +23,7 @@ const LeagueInfo = (props) => {
     else {
         display = <p className="card-text"><FontAwesomeIcon icon={faMars} /> Gender : {strGender}</p>
         showImage = <img src={maleImg} className='img-fluid rounded img-thumbnail' alt="..."></img>
-        buttonText = <p>See feMale Players <FontAwesomeIcon icon={faArrowAltCircleRight} /></p>
+        buttonText = <p>See Female Players <FontAwesomeIcon icon={faArrowAltCircleRight} /></p>
     }
 
 
@@ -32,17 +32,17 @@ const LeagueInfo = (props) => {
             <header>
                 <div >
                     <div>
-                        <div className="card bg-dark text-white">
-                            <img src={strBanner} className="card-img" alt="..."></img>
+                        <div className="card">
+                            <img style={{ minHeight: '130px' }} src={strBanner} className="card-img" alt="..."></img>
                             <div className="card-img-overlay">
-                                <img style={{ width: '240px', height: '75px' }} src={strLogo} className="img-fluid rounded mx-auto d-block" alt="..."></img>
+                                <img style={{ width: '300px', height: '100px' }} src={strLogo} className="img-fluid rounded mx-auto d-block" alt="..."></img>
                             </div>
                         </div>
                     </div>
 
                 </div>
             </header>
-            <div className="m-5 mb-5">
+            <div className="mt-5 mb-3">
                 <div >
                     <div className="container">
                         <div className="row">
@@ -74,7 +74,7 @@ const LeagueInfo = (props) => {
                     </div>
                 </div>
             </div>
-            <div className="container text-white pt-4 pb-5">
+            <div className="container text-white mt-5 pt-5 pb-3">
                 <p>{strDescriptionEN}</p>
             </div>
 
