@@ -14,11 +14,11 @@ const LeagueDetails = () => {
         fetch(url)
             .then(res => res.json())
             .then(data => setLeague(data.leagues))
-    }, [])
+    }, [idLeague])
     return (
         <div>
             {
-                league.map(league => <LeagueInfo league={league}></LeagueInfo>)
+                league.map(league => <LeagueInfo league={league} key={league.idLeague}></LeagueInfo>)
             }
         </div>
     );

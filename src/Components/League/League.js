@@ -28,7 +28,7 @@ const League = (props) => {
                 <p>Sports Type : {strSport}</p>
             </div>
             <div className='card-footer'>
-                <button onClick={() => showDetails(idLeague)} type="button" class="btn btn-secondary">Explore <FontAwesomeIcon icon={faArrowAltCircleRight} /></button>
+                <button onClick={() => showDetails(idLeague)} type="button" className="btn btn-secondary">Explore <FontAwesomeIcon icon={faArrowAltCircleRight} /></button>
             </div>
         </div>
     );

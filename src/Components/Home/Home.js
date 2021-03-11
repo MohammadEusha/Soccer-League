@@ -21,7 +21,7 @@ const Home = () => {
                     <div className="row">
                         <div className="col-sm">
                             {
-                                leagues.map(league => <League league={league}></League>)
+                                leagues.map(league => <League league={league} key={league.idLeague}></League>)
                             }
                         </div>
                     </div>

@@ -16,12 +16,12 @@ const LeagueInfo = (props) => {
     let showImage;
     let buttonText;
     if (gender) {
-        display = <p class="card-text"><FontAwesomeIcon icon={faMars} /> Gender : {strGender}</p>
+        display = <p className="card-text"><FontAwesomeIcon icon={faMars} /> Gender : {strGender}</p>
         showImage = <img src={maleImg} className='img-fluid rounded img-thumbnail' alt="..."></img>
         buttonText = <p>See Female Players <FontAwesomeIcon icon={faArrowAltCircleRight} /></p>
     }
     else {
-        display = <p class="card-text"><FontAwesomeIcon icon={faMars} /> Gender : Female</p>
+        display = <p className="card-text"><FontAwesomeIcon icon={faMars} /> Gender : Female</p>
         showImage = <img src={femaleImg} className='img-fluid rounded img-thumbnail' alt="..."></img>
         buttonText = <p>See Male Players <FontAwesomeIcon icon={faArrowAltCircleRight} /></p>
     }
@@ -33,9 +33,9 @@ const LeagueInfo = (props) => {
                 <div >
                     <div>
                         <div className="card bg-dark text-white">
-                            <img src={strBanner} class="card-img" alt="..."></img>
+                            <img src={strBanner} className="card-img" alt="..."></img>
                             <div className="card-img-overlay">
-                                <img style={{ width: '240px', height: '75px' }} src={strLogo} class="img-fluid rounded mx-auto d-block" alt="..."></img>
+                                <img style={{ width: '240px', height: '75px' }} src={strLogo} className="img-fluid rounded mx-auto d-block" alt="..."></img>
                             </div>
                         </div>
                     </div>
@@ -47,22 +47,22 @@ const LeagueInfo = (props) => {
                     <div className="container">
                         <div className="row">
                             <div className="col-md">
-                                <div class="card mt-3 mb-3 text-white" style={{ maxwidth: "540px", maxHeight: "400px", backgroundColor: '#101a2b' }}>
-                                    <div class="row g-0">
-                                        <div class="col-md-6">
-                                            <div class="card-body">
-                                                <h3 class="card-title">{strLeague}</h3>
-                                                <p class="card-text"><FontAwesomeIcon icon={faMapMarker} /> Founded : {intFormedYear}</p>
-                                                <p class="card-text"><FontAwesomeIcon icon={faFlag} /> Country : {strCountry}</p>
-                                                <p class="card-text"><FontAwesomeIcon icon={faFutbol} /> Sport Type : {strSport}</p>
+                                <div className="card mt-3 mb-3 text-white" style={{ maxwidth: "540px", maxHeight: "400px", backgroundColor: '#101a2b' }}>
+                                    <div className="row g-0">
+                                        <div className="col-md-6">
+                                            <div className="card-body">
+                                                <h3 className="card-title">{strLeague}</h3>
+                                                <p className="card-text"><FontAwesomeIcon icon={faMapMarker} /> Founded : {intFormedYear}</p>
+                                                <p className="card-text"><FontAwesomeIcon icon={faFlag} /> Country : {strCountry}</p>
+                                                <p className="card-text"><FontAwesomeIcon icon={faFutbol} /> Sport Type : {strSport}</p>
 
                                                 {display}
 
-                                                <button style={{ width: '200px', height: '40px' }} onClick={() => setGender(!gender)} type="button" class="btn btn-secondary ">{buttonText}</button>
+                                                <button style={{ width: '200px', height: '40px' }} onClick={() => setGender(!gender)} type="button" className="btn btn-secondary ">{buttonText}</button>
                                             </div>
 
                                         </div>
-                                        <div class="col-md-6">
+                                        <div className="col-md-6">
 
                                             {showImage}
 

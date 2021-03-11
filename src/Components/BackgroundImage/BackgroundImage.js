@@ -6,7 +6,7 @@ const BackgroundImage = () => {
     return (
         <div>
             <div className="card bg-dark text-white">
-                <img src={backgroundImage} class="card-img" alt="..."></img>
+                <img src={backgroundImage} className="card-img" alt="..."></img>
                 <div className="card-img-overlay">
                     <h1 className="card-title text-center fw-bolder text-white">S<FontAwesomeIcon icon={faFutbol} />ccer League</h1>
                 </div>
