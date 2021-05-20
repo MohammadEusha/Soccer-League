@@ -19,6 +19,6 @@ The Website is about Soccer League.In this site you will at first find some card
 
 ### Technology :-
 
-• Frontend : HTML , CSS, Bootstrap, JavaScript, React JS
+• Frontend : CSS, Bootstrap, JavaScript, React JS
 
 • Deploy Tools : Netlify, Github.
